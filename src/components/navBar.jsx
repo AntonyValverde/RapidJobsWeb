@@ -8,7 +8,7 @@ function NavigationBar() {
     useEffect(() => {
         const handleScroll = () => {
             setScroll(window.scrollY > 50);
-        };
+        }; 
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -27,12 +27,17 @@ function NavigationBar() {
         textShadow: '1px 1px 3px rgba(0, 0, 0, 0.6)'
     };
 
+    const toggleStyle = {
+        backgroundColor: 'white'
+
+    };
+
     return (
         <Navbar style={navbarStyle} expand="lg" fixed="top">
             <Container>
                 <Navbar.Brand href="#home" className={`brand-colored ${scroll ? 'brand-scrolled' : ''}`}>RapidJobs</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" style={toggleStyle} />
+                <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="ms-auto">
                         <Nav.Link href="#home" style={linkStyle}>Inicio</Nav.Link>
                         <Nav.Link href="#help" style={linkStyle}>Ayuda</Nav.Link>

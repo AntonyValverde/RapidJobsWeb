@@ -12,10 +12,9 @@
     transform: scale(1.2); /* Incremento al 120% */
 }
 
-/* Nav Brand (Logo) */
 .brand-scrolled {
     color: white;
-    transform: scale(0.9) rotate(-5deg); /* Escalar un 90% y rotar */
+    transform: scale(0.9) rotate(-5deg);  
     transition: all 0.3s ease;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra más notable */
 }
