@@ -4,7 +4,8 @@ import { Container, Row, Col, Button, Image, Carousel } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import NavigationBar from './components/navBar';
-import InicioSesion from './components/text';
+import InicioSesion from './components/inicio_guia';
+import Posteo from './components/posteo_servicio';
 
 function App() {
   useEffect(() => {
@@ -100,16 +101,35 @@ function App() {
 
         <Row style={sectionStyle} data-aos="fade-up" data-aos-delay="200">
           <Col md={6} className="order-md-2">
-            <Image
-              src="https://via.placeholder.com/600x400"
-              rounded
-              style={sectionImageStyle}
-            />
+            <Carousel style={{ maxWidth: '600px', margin: '0 auto' }}>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="/fotos/fotos_inicio/5.jpeg"
+                  alt="First slide"
+                  style={sectionImageStyle2}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="/fotos/fotos_inicio/6.jpeg"
+                  alt="1"
+                  style={sectionImageStyle2}
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="/fotos/fotos_inicio/7.jpeg"
+                  alt="2"
+                  style={sectionImageStyle2}
+                />
+              </Carousel.Item>
+            </Carousel>
           </Col>
           <Col md={6} className="align-self-center order-md-1">
-            <h2>Terminos y condiciones</h2>
-            <p></p>
-            <Button variant="primary">Saber más</Button>
+            <Posteo />
           </Col>
         </Row>
 

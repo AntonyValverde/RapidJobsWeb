@@ -21,7 +21,7 @@ function InicioSesion() {
         transition={{ type: 'spring', stiffness: 120, delay: 0.5 }}
       >
         <h2 style={{ color: '#343a40' }}>
-          <FaKey /> Guía Inicio Sesión
+          <FaKey /> Guía Inicio De Sesión
         </h2>
       </motion.div>
       <motion.div
@@ -34,22 +34,7 @@ function InicioSesion() {
           el registro de su usuario y usar más rápido la aplicación de
           RapidJobs.
         </p>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          style={{
-            backgroundColor: '#343a40',
-            border: 'none',
-            color: '#fff',
-            padding: '0.7rem 1rem',
-            fontSize: '1rem',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            marginTop: '1rem'
-          }}
-        >
-          Comenzar sesión
-        </motion.button>
+         
       </motion.div>
     </motion.div>
   );

@@ -29,7 +29,6 @@ function NavigationBar() {
 
     const toggleStyle = {
         backgroundColor: 'white'
-
     };
 
     return (
