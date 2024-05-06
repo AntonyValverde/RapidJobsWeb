@@ -1,0 +1,28 @@
+/* Nav Link */
+.nav-link {
+    color: white; /* Letra en blanco */
+    font-weight: bold;
+    margin-right: 20px; /* Espaciado entre opciones */
+    transition: all 0.2s ease-in-out;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+
+.nav-link:hover {
+    color: #ffcc00; /* Color dorado al pasar sobre el enlace */
+    transform: scale(1.2); /* Incremento al 120% */
+}
+
+/* Nav Brand (Logo) */
+.brand-scrolled {
+    color: white;
+    transform: scale(0.9) rotate(-5deg); /* Escalar un 90% y rotar */
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra más notable */
+}
+
+/* Clase personalizada para dar color al título */
+.brand-colored {
+    color: #ffffff !important;  /* Ejemplo de un color dorado */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);  /* Sombra para mejor legibilidad */
+}
