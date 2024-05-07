@@ -25,3 +25,41 @@
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);  /* Sombra para mejor legibilidad */
 }
+
+/* NavigationBar.css */
+
+/* Cambiar el color del ícono del menú */
+.navbar-light .navbar-toggler {
+    color: #fffffe; /* Cambia este color según tus necesidades */
+    border-color: #ffffff; /* Opcional, si quieres que el borde del botón tenga el mismo color */
+}
+
+/* Cambiar el color del ícono del menú a algo más personalizado, como un tono azul */
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23007bff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 2px;
+    background-color: #E8FBFC;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    .underline {
+        display: none;  /* Oculta la línea en pantallas de 992px o menos */
+    }
+}
+
+ 
+@media (max-width: 992px) {  
+    .nav-link {
+        margin: 0px 50px;  
+    }
+    
+}
+

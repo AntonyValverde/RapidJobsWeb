@@ -1,0 +1,77 @@
+/* Ayuda.css */
+.ayuda-container {
+    background-color: #f8f9fa;
+    /* Un fondo claro para el contenedor principal */
+    padding: 2rem 1rem;
+    /* Espaciado interno para darle aire al contenido */
+    border-radius: 8px;
+    /* Bordes redondeados para un look moderno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para resaltar el contenedor */
+    margin-top: 3.6rem;
+}
+
+.text-center {
+    text-align: center;
+    /* Centra el texto en su contenedor */
+}
+
+.ayuda-title {
+    color: #007bff;
+    /* Color azul para títulos, ajustable según la paleta de colores del sitio */
+    margin-bottom: 0.5rem;
+    /* Espacio debajo del título */
+}
+
+.ayuda-text {
+    color: #666;
+    /* Texto en color gris para fácil lectura */
+    font-size: 1.1rem;
+    /* Un tamaño de fuente ligeramente más grande para mejorar la legibilidad */
+}
+
+.card-row {
+    margin-top: 2rem;
+    /* Espacio arriba de la fila de tarjetas */
+}
+
+.ayuda-card {
+    margin: 1rem 0;
+    /* Margen alrededor de cada tarjeta para evitar que se toquen */
+    background-color: #ffffff;
+    /* Fondo blanco para las tarjetas */
+    border: none;
+    /* Sin bordes para un look más limpio */
+    border-radius: 8px;
+    /* Bordes redondeados para las tarjetas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidad */
+}
+
+.ayuda-card h5 {
+    color: #007bff;
+    /* Color del título de la tarjeta */
+}
+
+.ayuda-card p {
+    color: #333;
+    /* Color del texto de la tarjeta */
+}
+
+.contact-card {
+    background-color: #007bff;
+    /* Fondo azul para la tarjeta de contacto */
+    color: white;
+    /* Texto blanco para contraste */
+    padding: 1.5rem;
+    /* Mayor padding para dar más espacio al contenido */
+    border-radius: 8px;
+    /* Bordes redondeados consistentes */
+}
+
+@media (max-width: 768px) {
+    .ayuda-card {
+        margin-bottom: 2rem;
+        /* Mayor margen entre tarjetas en pantallas pequeñas */
+    }
+}
