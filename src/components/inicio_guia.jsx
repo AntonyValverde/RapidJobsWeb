@@ -12,7 +12,8 @@ function InicioSesion() {
         backgroundColor: '#fff',
         borderRadius: '15px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        overflow: 'hidden' // Para ocultar el desbordamiento de las animaciones
+        overflow: 'hidden', // Para ocultar el desbordamiento de las animaciones
+        marginTop: '3rem'
       }}
     >
       <motion.div

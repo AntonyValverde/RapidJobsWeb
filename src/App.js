@@ -70,7 +70,7 @@ function App() {
     <Router>
       <NavigationBar />
       <div className="App" style={appStyle}>
-        
+
         <Routes>
           <Route path="/ayuda" element={<Ayuda />} />
           <Route path="/terms" element={<Terminos />} />
@@ -81,7 +81,8 @@ function App() {
           <p>Descubre más sobre nuestros servicios y equipo.</p>
           <button
             className="fab"
-            onClick={() => { /* Función de descarga o acción */ }}
+            onClick={() => window.location.href =
+              'https://1drv.ms/u/s!AtpHceJ44ymigvdGwVXdDyaBSvKqYA?e=5thdsg'}
             style={{
               position: 'fixed',
               right: '30px',
@@ -101,6 +102,7 @@ function App() {
           >
             <FaCloudDownloadAlt style={{ verticalAlign: 'middle' }} size="100%" />
           </button>
+
         </header>
 
         <Container fluid>

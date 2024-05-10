@@ -1,16 +1,57 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import '../styles/ayuda.css';  // Asume que los estilos están definidos en Ayuda.css
+import '../styles/ayuda.css';
 
 class Ayuda extends React.Component {
+  state = {
+    showModal: null,
+  };
+
   componentDidMount() {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
       once: true
     });
+  }
+
+  openModal = (id) => {
+    this.setState({ showModal: id });
+  }
+
+  closeModal = () => {
+    this.setState({ showModal: null });
+  }
+
+  renderCard(title, text, aosType, aosDelay) {
+    return (
+      <Col md={4} data-aos={aosType} data-aos-delay={aosDelay}>
+        <Card className="ayuda-card">
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{text}</Card.Text>
+            <Button variant="primary" onClick={() => this.openModal(title)}>
+              Más Información
+            </Button>
+            <Modal show={this.state.showModal === title} onHide={this.closeModal} animation={true}>
+              <Modal.Header closeButton>
+                <Modal.Title>{title}</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                {text}
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={this.closeModal}>
+                  Cerrar
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </Card.Body>
+        </Card>
+      </Col>
+    );
   }
 
   render() {
@@ -37,24 +78,32 @@ class Ayuda extends React.Component {
                 <Card.Text>
                   Si necesitas asistencia personalizada, aquí encontrarás cómo contactarnos directamente.
                 </Card.Text>
+                <Button style={{background: 'white', color: 'black'}} variant="primary" onClick={() => this.openModal("Contacto Directo")}>
+                  Contactar
+                </Button>
+                <Modal show={this.state.showModal === "Contacto Directo"} onHide={this.closeModal}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Contacto Directo</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    Por favor, contáctanos a través de cualquier medio que prefieras:
+                    <ul>
+                      <li>Email: contacto@example.com</li>
+                      <li>Teléfono: +123 456 7890</li>
+                      <li>Chat en vivo disponible en nuestra plataforma</li>
+                    </ul>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={this.closeModal}>
+                      Cerrar
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
-    );
-  }
-
-  renderCard(title, text, aosType, aosDelay) {
-    return (
-      <Col md={4} data-aos={aosType} data-aos-delay={aosDelay}>
-        <Card className="ayuda-card">
-          <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{text}</Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
     );
   }
 }
