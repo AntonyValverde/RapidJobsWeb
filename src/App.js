@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container, Modal, Row, Col, Button, Carousel } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Contrato from './components/contrato';
 import NavigationBar from './components/navBar';
 import InicioSesion from './components/inicio_guia'; // Considerado como la página de inicio
 import Posteo from './components/posteo_servicio';
 import Ayuda from './components/ayuda';
 import Terminos from './components/terms';
+import Descarga from './components/descarga_guia';
 import Guia from './components/guia';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
 
@@ -48,7 +50,7 @@ function App() {
     padding: '3rem 0',
     textAlign: 'center',
     backgroundColor: '#E4F2FD',
-    borderBottom: '1px solid #ddd'
+    borderBottom: '6px solid #fff'
   };
 
   const sectionImageStyle = {
@@ -108,7 +110,127 @@ function App() {
         <Container fluid>
           <Row style={sectionStyle} data-aos="fade-up">
             <Col md={6}>
-              <Carousel style={{ maxWidth: '600px', margin: '0 auto' }}>
+              <Carousel style={{ maxWidth: '380px', margin: '0 auto' }}>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/1.jpeg"
+                    alt="First slide"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/2.jpeg"
+                    alt="1"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/3.jpeg"
+                    alt="2"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/4.jpeg"
+                    alt="3"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/5 (2).jpeg"
+                    alt="3"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/6 (2).jpeg"
+                    alt="3"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_descarga/7 (2).jpeg"
+                    alt="3"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+
+              </Carousel>
+            </Col>
+            <Col md={6} className="align-self-center">
+              <Descarga/>
+            </Col>
+          </Row>
+
+          <Row style={sectionStyle} data-aos="fade-up" data-aos-delay="200">
+            <Col md={6} className="order-md-2">
+              <Carousel style={{ maxWidth: '380px', margin: '0 auto' }}>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_aceptarOferta/1.jpeg"
+                    alt="First slide"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_aceptarOferta/2.jpeg"
+                    alt="1"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_aceptarOferta/3.jpeg"
+                    alt="2"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="/fotos/fotos_aceptarOferta/4.jpeg"
+                    alt="2"
+                    style={{ ...sectionImageStyle2, borderRadius: '15px' }}
+
+                  />
+                </Carousel.Item>
+              </Carousel>
+            </Col>
+            <Col md={6} className="align-self-center order-md-1">
+              <Contrato />
+            </Col>
+          </Row>
+
+          <Row style={sectionStyle} data-aos="fade-up">
+            <Col md={6}>
+              <Carousel style={{ maxWidth: '380px', margin: '0 auto' }}>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
@@ -155,7 +277,7 @@ function App() {
 
           <Row style={sectionStyle} data-aos="fade-up" data-aos-delay="200">
             <Col md={6} className="order-md-2">
-              <Carousel style={{ maxWidth: '600px', margin: '0 auto' }}>
+              <Carousel style={{ maxWidth: '380px', margin: '0 auto' }}>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
