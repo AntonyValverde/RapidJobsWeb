@@ -22,7 +22,7 @@ function Contrato() {
                 transition={{ type: 'spring', stiffness: 120, delay: 0.5 }}
             >
                 <h2 style={{ color: '#343a40' }}>
-                    <FaAddressCard/> Guía Posteo De Servicios
+                    <FaAddressCard/> Guía De Contratación
                 </h2>
             </motion.div>
             <motion.div
@@ -31,9 +31,8 @@ function Contrato() {
                 transition={{ delay: 0.7 }}
             >
                 <p style={{ color: '#343a40', fontSize: '1.1rem' }}>
-                    Damos atención a todas las necesidades por los usuarios,
-                    asi como una breve guía para el posteo de ofertas de servicio,
-                    reordar que hay ofertas de empleo y ofertas de servicios.
+                    Damos una guía rápida sobre la contratación de una oferta ya sea 
+                    de servicio oo de oferta dentro de RapidJobs. 
                 </p>
 
             </motion.div>
